@@ -1,0 +1,89 @@
+:root {
+    --title: #666;
+    --titleHover: #000;
+}
+
+.darkMode {
+    --title: #fff;
+    --titleHover: #fff;
+}
+
+@mixin media($size) {
+    @media screen and (max-width: #{$size}px) {
+        @content;
+    }
+}
+
+.header {
+    padding: 41px 0 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1000;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include media(1024) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &_logo {
+            background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--title); // Добавлено для поддержки стандартного цвета в режиме светлой темы
+        }
+
+        &_nav {
+            display: flex;
+            gap: 67px;
+            cursor: pointer;
+            text-align: center;
+
+            &-link>a {
+                color: var(--title);
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            @include media(800) {
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            :hover {
+                color: var(--titleHover);
+            }
+        }
+
+        &_transleite {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            button {
+                color: #666;
+                font-size: 20px;
+                font-weight: 500;
+                outline: none;
+                border: none;
+                background: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}

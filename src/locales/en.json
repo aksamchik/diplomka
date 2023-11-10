@@ -1,0 +1,23 @@
+{
+    "logo": "AkSam",
+    "footerCreate": "Designed and created by Samvel Ulyashen",
+    "nav": {
+        "home": "Home",
+        "about": "About Me",
+        "stack": "Tech Stack",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "banner": {
+        "bannerTitle": "Hi, my name is Samvel",
+        "bannerText": "I 'm a front-end developer"
+    },
+    "stackTitle": "My Tech Stack",
+    "stackDesc": " Technologies I’ve been working with recently",
+    "projects": {
+        "projectsTitle": "Projects",
+        "projectsSub": "Things I’ve built so far"
+    },
+    "footer": "Designed and created by ",
+    "footerSpan": "Samvel Ulyashin"
+}
